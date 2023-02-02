@@ -1,0 +1,5 @@
+- 这篇文章没有code
+- 这篇文章主要方法也是先用bert或者lstm得到句子的编码，然后将其输入到GCN layer做layout inforamation 的encode然后把两者的信息concate起来，然后再做一个sequence labeling标注，抽取属性，用BIO方式
+- 对于这个GCN的话，他是限制了最大节点数为100，每个节点所对应的句子包含的最多的token 数为50
+- 这篇文章还说用到了一些fine-tuning objective用来先训练前面的encoder
+-

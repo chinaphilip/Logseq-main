@@ -1,0 +1,5 @@
+- ![image.png](../assets/image_1668156727400_0.png)
+- 他这个并不是基于深度学习的，就完全是基于统计特征的
+- 主要分为2步
+- 第一步是数据中首先构造好一个biparty的图，然后从中选feature set，这个feature是skip gram式的feature，然后按照边的权重进行排序
+- 第二步就是基于构建好的context feature set去选择相似度最好的term作为这一轮迭代中要加入的词

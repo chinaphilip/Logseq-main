@@ -1,0 +1,11 @@
+- #深度主题模型
+- OAGT is a paper topic dataset consisting of 6942930 records which comprise various scientific publication attributes like abstracts, titles, keywords, publication years, venues, etc. The last two fields of each record are the topic id from a taxonomy of 27 topics created from the entire collection and the 20 most significant topic words. Each dataset record (sample) is stored as a JSON line in the text file.
+- We combine two popular topic modeling methods, LDA (Latent Dirilecht Allocation)
+  and Top2vec to analyze the data and construct a taxonomy of topics that are represented by their most significant terms. This way, we attach a topic to each of the data records, making it easy to recognize and utilize the resulting topically structured subsets separately for multitopic keyword generation or other types of experiments.
+- The data is derived from OAG data collection (https://aminer.org/open-academic-graph) which was released under ODC-BY license.
+- Topic Segmentation of Research Article Collections
+-
+-
+-
+-
+-

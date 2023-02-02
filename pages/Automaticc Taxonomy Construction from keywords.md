@@ -1,0 +1,6 @@
+- 这篇文章的任务的形式是给出一堆某个领域中的keywords，从他们当中构建Taxonomy关系
+- 主要包含两步
+- 第一步，从搜索引擎中获取每个keyword的context，再从已有的knowledge base中获取concepts
+- 第二步，利用多支层级聚类方法，对keyword进行层级聚类，构建taxonomy关系
+-
+- 最后作者是用一个保险行业的例子来证明所提出方法的有效性

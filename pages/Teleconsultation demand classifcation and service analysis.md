@@ -1,0 +1,9 @@
+- The teleconsultation demands are classifed into three categories, erratic, lumpy, and slow. Under the fixed strategies, the service analysis after demand classifcation reveals the defciencies of teleconsultation services, but analysis before demand classifcation can’t.
+- #在线医疗
+- #论文思路
+- 他这篇文章主要是对需求序列做的一个分类
+- 根据每个部门收到的需求序列，聚类
+- demand series classification
+- 根据时间是否规律和数量是否规律两个维度，把需求序列划分为四类
+- https://frepple.com/blog/demand-classification/
+- 未来做序列分类的时候可以参考下这篇文章

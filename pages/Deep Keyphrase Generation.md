@@ -1,0 +1,9 @@
+- https://github.com/memray/OpenNMTkpg-release
+- ![image.png](../assets/image_1658367630443_0.png)
+- 这篇论文中用到的数据集
+	- Inspec
+	- Krapivin
+	- NUS
+	- SemEval-2010
+	- KP20k
+-

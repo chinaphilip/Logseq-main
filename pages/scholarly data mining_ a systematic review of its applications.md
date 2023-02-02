@@ -1,0 +1,57 @@
+title:: scholarly data mining: a systematic review of its applications
+
+- **citaion analysis**
+	- count-based citation analysis
+	- content-based citation analysis has been proposed as the next generation of citation analysis. it aims to address why and how questions of citation analysis. NLP techniques have been used to extract the key concepts from citation contexts to understand the citing behavior. the identification of the best window size to extract the proper citation context and the detection of the correct citing paper sections are still an open challenge.
+- **co-citation analysis**
+- It measures the frequency with two papers/scholars are cited together by other papers/scholars
+- **author co-citation analysis**
+	- The author co-citation analysis measures the similarity between co-cited authors by considering author's citation context. For this end, the citing sentences are extracted to obtain the topical relatedness between the cited authors instead of traditional author co-citation frequency. The citing sentence similarity is then measured by topical relatedness between two citing sentences
+- **document co-citation analysis**
+	- the document co-citation analysis enables to identify relevant literature and scholarly communities that may be left unnoticed in standard approaches to literature searching
+- Both of author and document co-citation analyses enable the identification of the intellectual structure of a research domain and the recognition of relevant scholarly communitie
+- other scholarly aims:
+	- author names ambiguity
+	- topic classification
+	- scientific success prediction
+	- identification of sleeping beauties
+	- trend analysis
+- **Bibliometrics analysis**
+	- Bibliometrics analysis focuses on the use of statistical analysis to examine scientific production patterns in a scientific field
+	- Bibliometrics analysis is centrally, but not only, based on citation analysis.
+	- 这个主要是用统计学的方法去研究整个科学的产生的过程的，他的影响因素，产生速度之类
+	- scientometrics, which is defined as “the study of the quantitative aspects of the process of science as a communication system
+- **Content analysis**
+	- 对于主题分类，有论文使用联合训练的方式综合了论文的引用网络信息和论文的文本信息来鉴别一篇文章所涉及到的主题
+- **Scientfic recommendation**
+	- Scientific recommendation includes paper/topic recommendation and reviewer recommendation
+	- 论文推荐，主题推荐，评审专家推荐
+	- 论文推荐系统会考虑论文的文本信息和论文在引用网络中的信息
+- Trend analysis
+	- 根据所使用的方法可以分为基于引用分析的方法，基于文献内容的方法，基于两者混合的方法
+	- 有人用文献共被引分析分析了IS领域十年的研究主题的变化
+	- 有人使用了词向量来分析关键词之间的关系的变化
+	- 有人用词向量研究了语义偏移
+- 下面是说为什么要用基于内容的方法
+	- While citation counts may infer the importance of scientific work, they fail to delve into the paper content, which could lead to a more accurate computational history. For this reason, content-based approaches have emerged.
+	- While topic models try to extract semantics by capturing document level associations between words, they fail to detect pairwise associations between keywords.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-

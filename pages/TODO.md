@@ -1,0 +1,2 @@
+- TODO longformer里面实现了sliding attention
+- TODO https://ai.googleblog.com/2021/03/constructing-transformers-for-longer.html

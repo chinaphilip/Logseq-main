@@ -1,0 +1,8 @@
+- Spektral基于Keras的
+- Deep Graph Library - DGL4.0支持异质图
+- ![image.png](../assets/image_1647687427324_0.png)
+- PyTorch Geometric
+- Stellargraph
+- https://blog.csdn.net/lj2048/article/details/112177711
+- dgl-同构+异构图的创建和属性信息使用
+-

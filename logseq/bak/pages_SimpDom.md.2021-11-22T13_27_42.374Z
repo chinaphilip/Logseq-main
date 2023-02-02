@@ -1,0 +1,7 @@
+- The node encoder consists of three components:
+	- DOM tree simplification module,
+	- text encoder,
+	- discrete feature module.
+- DOM tree simplification module
+- extract the contexts
+  for each variable node �

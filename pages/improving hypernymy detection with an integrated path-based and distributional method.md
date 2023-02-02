@@ -1,0 +1,3 @@
+- ![image.png](../assets/image_1668709882622_0.png)
+- 这篇文章是将word embedding和path embedding结合再一起然后训练个分类器来判别两个词之间是不是上下位关系
+- path embedding的方式就是如上图，把每个path通过lstm得到编码，然后再做average pooling得到总体性的编码

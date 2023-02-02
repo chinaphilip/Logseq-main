@@ -1,0 +1,13 @@
+- 这篇文章也是用到自监督学习，他这个没有设置老师模型和学生模型而是直接model1, model2式的更新，训练集的更新方式就是把将模型的置信度较高的预测标签加入下一次迭代的训练集中，无法保证每次迭代后得到的模型是更优的
+- 就是先训练一个
+- 他的输入也是以句子的方式输入进去
+- 三种word embedding, pos embedding, dependency embedding拼接到一起作为输入
+- 用到两个数据集
+	- SemEval 2017  Task 10
+	- ACL keyphrase corpus
+- 对于每个训练集都会进一步补充一些unannotated corpus
+- 最后效果
+-
+-
+-
+-

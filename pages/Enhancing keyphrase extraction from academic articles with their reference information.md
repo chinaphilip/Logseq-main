@@ -1,0 +1,10 @@
+- 这篇文章是章志成的
+- 这篇文章里有用到三个全文数据集
+	- Semeval-2010  dataset
+	- Pubmed dataset
+	- LIS-2000 dataset 也是包含期刊全文的，采集自五本信息科学期刊的
+- 这篇文章用了五种方法来抽取关键词
+- TF*IDF, TextRank, NB algorithm, CRF, Bilstm
+- 就是包含监督式和非监督式方法
+- 这边文章他说的他的创新点就是把reference title的信息加入了实体抽取中，在序列标注方法中，除了字符本身的语义特征之外，还加入了很多的离散特征
+- https://github.com/chengzhizhang/Keyphrase_Extraction

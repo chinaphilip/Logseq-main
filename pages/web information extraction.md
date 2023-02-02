@@ -1,0 +1,10 @@
+- [[FreeDom  —— 一个可迁移的网页信息抽取模型]]
+- [[SimpDom]]
+- [[OpenTag Open Attribute Value Extraction from Product Profiles]]
+- [[WebKE: Knowledge Extraction from Semi-structured Web with Pre-trained Markup Language Model]]
+- [[WebFormer_ The Web-page Transformer for Structure Information Extraction]]
+- [[https://zhuanlan.zhihu.com/p/326302618]]信息抽取冠军方案分享：嵌套NER+关系抽取+实体标准化
+- [[One Tree to a Forest: a Unified Solution for Structured Web Data Extraction]]
+- [[ZeroShotCeres: Zero-Shot Relation Extraction from Semi-Structured Webpages]]
+- [[LayoutLMv2: Multi-modal Pre-training for Visually-rich Document Understanding]]
+- [[GraphIE: A Graph-Based Framework for Information Extraction]]

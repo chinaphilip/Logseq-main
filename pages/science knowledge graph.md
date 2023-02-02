@@ -1,0 +1,6 @@
+- [[https://zhuanlan.zhihu.com/p/150441375]]《采用图来提高多文档生成式摘要》阅读笔记
+- [[https://zhuanlan.zhihu.com/p/136069684]]基于Transformer的生成式多文档摘要技术
+- https://sci-k.github.io/2022/
+- https://sci-k.github.io/2021/
+- [[Automatic ontology construction from text: a review from shallow to deep learning trend]]
+- [[论文信息抽取]]

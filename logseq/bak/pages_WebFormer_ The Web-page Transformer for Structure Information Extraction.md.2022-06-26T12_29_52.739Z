@@ -1,0 +1,43 @@
+- In this paper, we introduce WebFormer,
+- First, we design HTML tokens for each DOM node in the HTML by embedding representations from their neighboring tokens through **graph attention**.
+- Second, we construct rich attention patterns between HTML tokens and text tokens, which leverages the web layout for effective attention weight computation.
+- The web document is first processed into a sequence of text nodes and the HTML DOM
+  tree. We denote the text sequence from the web document as 𝑇 = (𝑡1, 𝑡2, . . . , 𝑡𝑘 ), where 𝑡𝑖 represents the 𝑖-𝑡ℎ text node on the web. 𝑘 is the total number of text nodes with 𝑡𝑖=(𝑤𝑖1
+  ,𝑤𝑖2, . . . ,𝑤𝑖𝑛𝑖 ) as its 𝑛𝑖 words/tokens. Note that the ordering of the text nodes does
+  not matter in our model, and one can traverse the DOM tree in any order to obtain all the text nodes
+- Denote the DOM tree of the HTML as 𝐺 = (𝑉 , 𝐸), where 𝑉 is the set of DOM nodes in the tree with 𝐸 being the set of edges.
+- The goal of structure information extraction is that given a set of target fields 𝐹=(𝑓1, . . . , 𝑓𝑚), extract their corresponding text information from the web document.
+- ![image.png](../assets/image_1644564966495_0.png)
+-
+  > Input Layer
+	- Field token: A set of field tokens are used to represent the text field to be extracted, such as “title”, “company” and “base salary” for a job page.
+	- HTML token: Each node in the DOM tree 𝐺, including both internal nodes (non-text node) and text nodes, corresponds to an HTML token in WebFormer
+	- Text token
+- for field and text tokens, their final embeddings are achieved by concatenating a word embedding and a segment embedding. For HTML token embedding, they are formulated by concatenating a tag embedding and a segment embedding.The segment embedding is added to indicate which type the token belongs to, i.e. field, HTML or text. The tag embedding is introduced to represent different HTML-tag of the DOM nodes,
+  e.g. “𝑑𝑖𝑣”, “ℎ𝑒𝑎𝑑”, “ℎ1”, “𝑝”, etc.
+-
+  > WebFormer Encoder
+	- The WebFormer encoder is **a stack of 𝐿 identical contextual layers**, which efficiently connects the field, HTML and text tokens with rich attention patterns followed by a feed-forward network.
+		- To capture the complex HTML layout with the text sequence, we design four different attention patterns, including
+		  1) HTML-to-HTML (H2H) attention which models the relations among HTML tokens via graph attentions. We use the original graph 𝐺 that represents the DOM tree structure of the HTML in the H2H attention calculation.
+		- 2) HTML-to-Text (H2T) attention, which bridges the HTML token with its corresponding
+		  text tokens.
+		- 3) Text-to-HTML (T2H) attention that propagates the information from the HTML tokens to the text tokens. In T2H attention, each text token communicates with every HTML token.
+		- 4) Text-to-Text (T2T) attention with relative position representations.each text token only attends to the text tokens
+		  within the same text sequence and within a local radius�
+		- Field Token Attention  enable full cross-attentions between field and HTML tokens
+- ![image.png](../assets/image_1645647055510_0.png){:height 397, :width 704}
+- ![image.png](../assets/image_1644572050174_0.png)
+-
+  > The output layer
+- The output layer of WebFormer extracts the final text span for the field from the text tokens. We apply a softmax function on the output embeddings of the encoder to **generate the probabilities for the begin and end indices**
+- ![image.png](../assets/image_1644568186156_0.png)
+- we further predict the end index based on the start index by concatenating the begin token embedding with every token embedding after it.
+-
+  > implementation detail
+- we use open-source LXML library3 to process each page for obtaining the DOM tree structures. We then use in order traverse of the DOM tree to obtain the text nodes
+  sequence. The parameters used in WebFormer are 12 layers, 768 hidden size, 3072
+  hidden units (for FFN) and 64 local radius. The maximum text sequence length is set to 2048
+#### Zero-shot/Few-shot Extraction
+- ![image.png](../assets/image_1644590431264_0.png)
+-

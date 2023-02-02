@@ -1,0 +1,16 @@
+- BEIT: BERT Pre-Training of Image Transformers
+- Self-Supervised Learning 超详细解读 (三)：BEiT：视觉BERT预训练模型
+-
+- 第1个困难的地方是：视觉任务没有一个大的词汇表。在 NLP 任务中，比如图3所示，假设我们盖住词汇 "湾"，那么就想让模型根据这个不完整的句子来预测被盖住的 token 是 "湾"，此时我们有个词汇表，比如这个词汇表一共有8个词，"湾" 是第3个，则 "湾" 这个 token 的真值就是  ，只需要让模型的输出和这个  越接近越好。
+- 但是 CV 任务没有这个词汇表啊，假设我盖住一个 patch，让模型根据这个不完整的 image 来预测被盖住的 patch 是什么。那么对应的这个  是什么呢？
+- BEIT 通过一种巧妙的方式解决了这个问题。
+- 假设这个问题可以得到解决，我们就能够用 masked image modeling 的办法 (和BERT类似，盖住图片的一部分之后预测这部分) 训练一个针对图片的预训练模型，这个预训练模型就也可以像 BERT 一样用在其他各种 CV 的下游任务中啦
+-
+-
+- BEIT的结构可以看做2部分，分别是：
+	- **BEIT Encoder**
+	  **dVAE**
+- BEIT Encoder 类似于 Transformer Encoder，是对输入的 image patches 进行编码的过程，dVAE 类似于 VAE，也是对输入的 image patches 进行编码的过程，
+- 参考文献
+- https://zhuanlan.zhihu.com/p/381345343
+-
