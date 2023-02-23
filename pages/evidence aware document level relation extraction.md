@@ -1,0 +1,47 @@
+- 这篇文章解决的问题是篇章级的关系抽取，用到了深度学习算法Dual-DQN
+- 他把这个篇章级的关系抽取任务分为了两个子问题，
+- 第一个问题是抽取关键片段，第二个问题是关系分类
+- 他是首先把文档转化为了一个图，图的节点是文档中所谈论到的实体，边代表实体共现出现的句子，如果两个实体共现的句子有多个，那他们之间的边就代表了多个句子
+- 然后对图中的任意两个实体间的关系做分类的时候，需要构建句子的集合，他这里把搜索的句子范围限定在了这样一个集合中，这个集合是刚刚构建的图中的任意两个点之间的shortest path上所涉及到底句子
+- 然后他又构建了一个强化学习网络来对句子做选择就说从好几个句子中选择几个句子，然后基于这几个句子来对实体的关系做分类，他这么做的动机是想排除一些会对分类结果造成干扰的句子，也就是排除噪音句子，这个award的设计也很迷，感觉就像是有监督学习里面的一样，论文里面是设定每次从集合中选择一个句子，运行3次，一共选择3个句子，构成每两个实体之间分类的样本（感觉有为了强化学习而强化学习的味道，故意在强化学习）
+- 然后接下来就是把选择出来的几个句子拼接起来做实体关系预测了
+- >Reinforcement learning in NLP
+- 他这篇文章做了强化学习在nlp中的应用的综述，感觉挺好的
+-
+- Fast Abstractive Summarization with Reinforce-Selected Sentence Rewriting
+	- ACL2018中的一篇文章提出了一个准确快速的摘要模型，首先用抽取模型抽取关键句子，然后用摘要模型将关键句子重写，并用强化学习将两个模型连接起来首次实现了端到端的自动摘要模型
+- A DEEP REINFORCED MODEL FOR ABSTRACTIVE SUMMARIZATION
+- Neural speed reading via skim-rnn
+- Learning to Skim Text
+	- 对于信息过滤，一般通过stop、skip和skim reading进行实现。Adams Wei Yu等人提出用策略梯度算法解决训练过程中离散即不可导的问题，从而实现skip reading
+- GANS for Sequences of Discrete Elements with the Gumbel-softmax Distribution
+	- SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient
+	- seqGAN
+	  background-color:: #533e7d
+	-
+	- SeqGAN的提出，使得备受瞩目的GAN能用于离散问题，突破了以前GAN不能用于NLP领域的限制，这也要归功于强化学习。该算法巧妙地将GAN和强化学习结合起来，为NLP领域也开启了新的篇章。因此，一系列SeqGAN的变体也油然而生，如RankGAN[16]、LeakGAN[17]、MaliGAN[18]、TextGAN[19]、GSGAN[20]等。
+	- 在传统的GAN算法中，由于G生成的是离散输出，难以使D回传梯度进行更新G，因此考虑采用强化学习中的策略梯度算法实现梯度后传。
+	- 如上图右边所示，G作为策略网络，直接进行动作输出，已经生成的样本作为状态（State），而下一个即将生成的样本作为动作（Action）。而考虑到强化学习需要对动作的好坏进行评分，但是G每次只能生成一个token，而我们一般对完整序列评分，因此采用蒙特卡罗树搜索（MCTS）每次在执行一个动作后进行“试验”，采样各种可能性的后续动作将整个序列进行补全。接着D对这些完整的序列产生奖励（Reward），回传给G，再用策略梯度算法更新G。这样通过强化学习的方法进行不断训练，得到一个最优的生成器。
+	- 因此，强化学习设置如下：
+	- State：现在已经生成的token
+	- Action：下一个即将生成的token
+	- Reward：GAN的判别器所回传的信息
+	- Policy：GAN的生成器
+- >hard attention
+	- The advantage of soft attention is that it can be easily trained with other component of the model in an end-to-end way. However, soft attention usually suffers from Attention Distraction [18] which refers to the problem of assigning relatively small but nonzero attention value to unrelated parts of a sequence. The Attention Distraction problem usually weakens the attention scores assigned to significant parts in text and increases the computation burden.
+	- To alleviate this problem, hard attention models are proposed to force the model to only select important parts and ignore the trivial items. Hard attention assumes that the
+	  attention score to be a Boolean value indicating whether selecting the item or not [18]. As in the soft attention model, the hard attention score in the hard attention model is computed by a densely connected network. Since the attention score is a discrete value that cannot be learned by backpropagation, the hard attention model usually relies on optimization methods in reinforcement learning such as policy gradient [31]. The hard attention model is widely applied in NLP tasks like machine reading comprehension [32] and sentiment classification [33]. However, since the weights of models estimated by policy gradient usually have high variance, the hard attention model is extremely hard to be trained and transferred to different data distributions.
+	-
+	- Existing neural attention models (hard or soft) usually compute the attention score by a fully connected neural network which only leverages the current source input and
+	  ignores the context information. The fully-connected network of the attention model limits the receptive field on text sequences, especially when processing long sequences.
+	  Moreover, there is few in-depth research on the relation between human’s attention mechanism and neural attention models in deep learning. To remedy these problems, we propose a convolution-based attention model which leverage context information in the source sequence to effectively models the human’s attention mechanism.
+-
+- [[Reinforced mnemonic reader for machine reading comprehension]]
+- ‘[[Aspect level sentiment classification with heat (hierarchical attention) network]]
+-
+-
+-
+-
+-
+- [[coarse to fine attention models for document summarization]]
+- #强化学习
