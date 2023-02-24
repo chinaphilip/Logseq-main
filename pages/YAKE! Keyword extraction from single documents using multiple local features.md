@@ -5,8 +5,7 @@
 - we compare it against ten state-of-the-art unsupervised approaches and one supervised method. Experimental results carried out on top of twenty datasets show that YAKE! significantly outperforms other unsupervised methods on texts of different sizes, languages, and domains
 - 这篇文章只需要维护一个停用词表就够了
 - 这篇文章还有一个特点是对关键词的频率没做任何的限制
--
-  >模型主要步骤
+- >模型主要步骤
 - (1) **text pre-processing and candidate term identification**;这步主要就是分词，他这个分词的时候给每个token增加了一个标记，如下面是数字或者数字和字符混合的那种
 	- ![image.png](../assets/image_1667376307189_0.png)
 	- ![image.png](../assets/image_1667376319241_0.png)
@@ -45,6 +44,6 @@
 		- the Levenshtein similarity
 		- the Jaro-Winkler similarity
 		- the sequence matcher
--
-  >对比方法
+- >对比方法
 - The unsupervised approaches include three statistical methods (TF.IDF [22], KP-Miner [13], and RAKE [42]) and seven graph-based methods (TextRank [37], SingleRank [48], ExpandRank [48], TopicRank [4], TopicalPageRank [46], PositionRank [15], and MultipartiteRank [6]). The supervised method is KEA [50]
+- ![image.png](../assets/image_1676451228200_0.png)
