@@ -38,6 +38,15 @@
 	- GPT-3采用了 96层的多头transformer，头的个数为 96；
 	  词向量的长度是12888 ；
 	  上下文划窗的窗口大小提升至  2048个token；
+	  
 	  使用了alternating dense和locally banded sparse attention[11]。主要是参考了sparse transformer做了稀疏注意力机制，才把窗口扩展到了2048那么大
 	-
 - 在大量的语言模型数据集中，GPT-3超过了绝大多数的zero-shot或者few-shot的state-of-the-art方法。另外GPT-3在很多复杂的NLP任务中也超过了fine-tune之后的state-of-the-art方法，例如闭卷问答，模式解析，机器翻译等。除了这些传统的NLP任务，
+   使用了alternating dense和locally banded sparse attention[11]。
+- 在大量的语言模型数据集中，GPT-3超过了绝大多数的zero-shot或者few-shot的state-of-the-art方法。另外GPT-3在很多复杂的NLP任务中也超过了fine-tune之后的state-of-the-art方法，例如闭卷问答，模式解析，机器翻译等。除了这些传统的NLP任务，
+- >GPT到底是单向还是双向
+- GPT对Transformer的使用是decoder模式，严格来说，既不是真·单向<LSTM>也不是真·双向<encoder模式>。如果说是单向，它又在全部上文序列之间支持任意两个词之间的attention；如果说是双向，它又将下文的词全部mask住不参与训练。因此，将其称为局部双向是比较合理的。为了实现利用双向语义，ELMo拼接了两个单向LSTM，GPT虽然升级为特征提取能力更强的transformer，却放弃了真正双向的encoder模式。这是为什么呢？从另一个角度想一想，BERT取得大满贯是因为它在模型结构上做了突破性的改进吗？不，还是transformer罢了。真正了不起的是BERT将传统的LM训练任务，修改为Masked LM，从而实现真·双向语义。因此，GPT仍然看起来像个单向模型，是受限于LM训练任务本身——预测当前词时必须要遮住全部下文词。它是天然的单向任务，即使使用了双向的transformer特征提取器，也只能看起来像个双向模型。从这一点上来说，BERT的思路是如此自然简单又让人不得不叹服。
+- 作者：小莲子
+  链接：https://www.zhihu.com/question/322034410/answer/671082666
+  来源：知乎
+  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

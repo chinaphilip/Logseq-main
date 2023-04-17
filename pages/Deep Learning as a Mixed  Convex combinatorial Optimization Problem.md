@@ -1,0 +1,3 @@
+- 《终极算法》作者、华盛顿大学教授Pedro Domingos和同事Abram L.Friesen今天在arxiv发布的论文《Deep Learning as a Mixed  Convex combinatorial Optimization Problem》就提出了一种使用离散优化，而非反向传播的深度学习方法。
+-
+- #非连续优化
