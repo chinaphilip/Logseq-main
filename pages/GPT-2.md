@@ -1,7 +1,6 @@
 - GPT是openAI发布的系列模型
 - [[Improving Language Understanding by Generative Pre-Training]]
--
-  >GPT1
+- >GPT1
 - ![image.png](../assets/image_1660817008948_0.png){:height 296, :width 704}
 - 图2：(左)：transformer的基本结构，（右）：GPT-1应用到不同任务上输入数据的变换方式
 - **预训练模型（无监督）**
@@ -10,8 +9,7 @@
 	- ![image.png](../assets/image_1660817397198_0.png)
 	- ![image.png](../assets/image_1660817408156_0.png)
 -
--
-  >GPT2
+- >GPT2
 - GPT-2依然沿用GPT单向transformer的模式，只不过做了一些改进与改变
 	- GPT-2去掉了fine-tuning训练
 	- 增加数据集：既然要博览群书，当然得先有书，所以GPT-2收集了更加广泛、数量更多的语料组成数据集
@@ -34,12 +32,12 @@
 - GPT-2的学习目标是使用无监督的预训练模型做有监督的任务, GPT-2的最大贡献是验证了通过海量数据和大量参数训练出来的词向量模型有迁移到其它类别任务中而不需要额外的训练。
 - GPT-2训练了4组不同的层数和词向量的长度的模型
 - ![image.png](../assets/image_1660817614358_0.png)
--
-  >GPT-3：海量参数
+- >GPT-3：海量参数
 - 模型
 - GPT-3沿用了GPT-2的结构，但是在网络容量上做了很大的提升，具体如下：
 	- GPT-3采用了 96层的多头transformer，头的个数为 96；
 	  词向量的长度是12888 ；
 	  上下文划窗的窗口大小提升至  2048个token；
-	  使用了alternating dense和locally banded sparse attention[11]。
+	  使用了alternating dense和locally banded sparse attention[11]。主要是参考了sparse transformer做了稀疏注意力机制，才把窗口扩展到了2048那么大
+	-
 - 在大量的语言模型数据集中，GPT-3超过了绝大多数的zero-shot或者few-shot的state-of-the-art方法。另外GPT-3在很多复杂的NLP任务中也超过了fine-tune之后的state-of-the-art方法，例如闭卷问答，模式解析，机器翻译等。除了这些传统的NLP任务，

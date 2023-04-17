@@ -1,0 +1,32 @@
+-
+-
+- [dair-ai/Prompt-Engineering-Guide: 🐙 Guides, papers, lecture, notebooks and resources for prompt engineering (github.com)](https://github.com/dair-ai/Prompt-Engineering-Guide)
+- [[The Power of Scale for Parameter-Efficient Prompt Tuning]]
+- [[指令微调数据集]]
+- [[已发布大模型总结]]
+- [[Flan]]
+- [[instruct gpt]]
+- [[self-instruct]]
+- [[sparrow]]
+- [[LaMDA]]
+- [[chatgpt is knowledgeable but inexperienced solver an investigation of commonsense problem in large language models]]
+- [kaixindelele/ChatPaper: Use ChatGPT to summarize the arXiv papers. 全流程加速科研，利用chatgpt进行论文总结+润色+审稿+审稿回复 (github.com)](https://github.com/kaixindelele/ChatPaper)
+- [liuyixin-louis/OpenChatPaper: Yet another paper reading assistant based on OpenAI ChatGPT API. An open-source version that attempts to reimplement ChatPDF. A different dialogue version of another ChatPaper project. (github.com)](https://github.com/liuyixin-louis/OpenChatPaper)
+-
+- [mayooear/gpt4-pdf-chatbot-langchain: GPT4 & LangChain Chatbot for large PDF docs (github.com)](https://github.com/mayooear/gpt4-pdf-chatbot-langchain)
+-
+- [talkingwallace/ChatGPT-Paper-Reader: This repo offers a simple interface that helps you to read&summerize research papers in pdf format. You can ask some questions after reading. This interface is developed based on openai API and using GPT-3.5-turbo model. (github.com)](https://github.com/talkingwallace/ChatGPT-Paper-Reader)
+-
+- [imClumsyPanda/langchain-ChatGLM: langchain-ChatGLM, local knowledge based ChatGLM with langchain ｜ 基于本地知识的 ChatGLM (github.com)](https://github.com/imClumsyPanda/langchain-ChatGLM)
+-
+-
+-
+- [TH-MLab/papergpt: An open-source LLM based research assistant that allows you to have a conversation with a research paper (github.com)](https://github.com/TH-MLab/papergpt)
+-
+- [GanymedeNil/document.ai: 基于向量数据库与GPT3.5的通用本地知识库方案(A universal local knowledge base solution based on vector database and GPT3.5) (github.com)](https://github.com/GanymedeNil/document.ai)
+-
+- [postor/chatpdf-minimal-demo (github.com)](https://github.com/postor/chatpdf-minimal-demo)
+-
+-
+-
+-
